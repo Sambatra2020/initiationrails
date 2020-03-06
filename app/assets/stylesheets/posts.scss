@@ -1,0 +1,21 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.transp {
+  opacity: 0.5;
+}
+h6{
+  opacity: 1 !important;
+  color: white !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+label{
+  color:white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.fo {
+  width: 20%;
+}

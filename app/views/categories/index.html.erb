@@ -1,0 +1,29 @@
+<h1>Categories#index</h1>
+<p>
+  session: <%= @session.inspect%>
+</p>
+<table class="table">
+  <thead class="lohany thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NOM</th>
+      <th scope="col">SLUG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+    <tr>
+      <td class="transp bg-success"><h6><%= category.id %></h6></td>
+      <td class="transp bg-success"><h6><%= category.name %></h6></td>
+      <td class="transp bg-success"><h6><%= category.slug %></h6></td>
+      <td class="btn btn-success"><a  href="<%= category_path (category.id)%>" ><h6 class="kolo">voir plus</h6></a></td>
+      <td class="btn btn-success"><a  href="<%= edit_category_path (category.id)%>" ><h6 class="kolo">EDITER</h6></a></td>
+      <td class="btn btn-danger"><a  href="<%= category_path (category.id)%>" data-confirm="êtes vous sur?" data-method="DELETE" ><h6 class="kolo">SUPPRIMER</h6></a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <a href="<%= new_category_path %>" class="btn btn-success" > CREER UNE NOUVELLE CATEGORIE</a>
+</p>

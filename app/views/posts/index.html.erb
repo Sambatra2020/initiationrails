@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/style.css">
+<h1>Articles</h1>
+
+<table class="table">
+  <thead class="lohany thead-dark">
+    <tr>
+      <th scope="col">NOM</th>
+      <th scope="col">AGE</th>
+      <th scope="col">SEXE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @post.each do |t| %>
+    <tr>
+      <td class="transp bg-success"><h6><%= t.name %></h6></td>
+      <td class="transp bg-success"><h6><%= t.age %></h6></td>
+      <td class="transp bg-success"><h6><%= t.sexe %></h6></td>
+      <td class="btn btn-success"><a  href="<%= post_path (t.id)%>" ><h6 class="kolo">voir plus</h6></a></td>
+      <td class="btn btn-success"><a  href="<%= edit_post_path (t.id)%>" ><h6 class="kolo">EDITER</h6></a></td>
+      <td class="btn btn-danger"><a  href="<%= post_path (t.id)%>" data-confirm="êtes vous sur?" data-method="DELETE" ><h6 class="kolo">SUPPRIMER</h6></a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div>
+  <a class="btn btn-success" href="<%= new_post_path %>" ><h6 class="kolo">CREER UN NOUVEAU MEMBRE</h6></a>
+</div>

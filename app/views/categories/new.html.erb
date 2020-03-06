@@ -1,0 +1,17 @@
+<h1>Nouvelle Categories</h1>
+
+<%= form_for @category do |f| %>
+  <div class="form-group">
+    <div class="fo form-group align-middle">
+      <label>EDITER LE NOM</label>
+      <%= f.text_field :name , class: 'form-control' %>
+    </div>
+    <div class="fo form-group align-middle">
+      <label>EDITER LE SLUG</label>
+      <%= f.text_field :slug , class: 'form-control' %>
+    </div>
+    <div class="fo form-group align-middle">
+      <button type="submit" class="btn btn-success">Creer un article</button>
+    </div>
+  </div>
+<% end %>
